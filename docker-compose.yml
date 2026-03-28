@@ -12,6 +12,10 @@ services:
       - SPRING_DATASOURCE_USERNAME=winwin
       - SPRING_DATASOURCE_PASSWORD=secret
       - SERVER_PORT=8080
+      - WINWIN_JWT_SECRET=myjwtsecretmyjwtsecretmyjwtsecret32
+      - WINWIN_INTERNAL_TOKEN=supersecrettoken123
+      - WINWIN_DATA_API_URL=http://data-api:8081
+
     depends_on:
       postgres:
         condition: service_healthy
@@ -26,6 +30,8 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=local
       - SERVER_PORT=8081
+      - WINWIN_INTERNAL_TOKEN=supersecrettoken123
+
 
   postgres:
     image: postgres:16-alpine

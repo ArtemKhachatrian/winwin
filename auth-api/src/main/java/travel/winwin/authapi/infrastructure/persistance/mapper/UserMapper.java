@@ -4,7 +4,7 @@ import org.mapstruct.Mapper;
 import travel.winwin.authapi.domain.model.User;
 import travel.winwin.authapi.infrastructure.persistance.entity.UserEntity;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface UserMapper {
 
     UserEntity toEntity(User user);

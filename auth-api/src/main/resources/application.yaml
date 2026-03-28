@@ -2,9 +2,9 @@ spring:
   application:
     name: auth-api
   datasource:
-    url: jdbc:postgresql://postgres:5432/app
-    username: artem
-    password: password
+    url: jdbc:postgresql://localhost:5432/winwin
+    username: winwin
+    password: secret
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -20,3 +20,13 @@ spring:
     enabled: true
     locations: classpath:db/migration
     baseline-on-migrate: false
+
+winwin:
+  internal:
+    token: supersecrettoken123
+  jwt:
+    secret: myjwtsecretmyjwtsecretmyjwtsecret32
+    expiration: 86400000
+  data:
+    api:
+      url: http://localhost:8081

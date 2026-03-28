@@ -2,10 +2,10 @@ package travel.winwin.authapi.infrastructure.persistance.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
 
 import java.util.UUID;
 
@@ -14,7 +14,6 @@ import java.util.UUID;
 @Entity
 @Table(name = "users")
 public class UserEntity {
-
 
     @Id
     private UUID id;
